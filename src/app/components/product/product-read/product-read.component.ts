@@ -9,6 +9,8 @@ import { ProductService } from "../product.service";
 })
 export class ProductReadComponent implements OnInit {
   products: Product[];
+  displayedColumns = ["id", "name", "price", "action"];
+
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
@@ -16,5 +18,9 @@ export class ProductReadComponent implements OnInit {
       this.products = products;
       console.log(products);
     });
+  }
+
+  killProduct(): void {
+    // this.productService.delete()
   }
 }
