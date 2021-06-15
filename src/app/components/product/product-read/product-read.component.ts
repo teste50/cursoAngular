@@ -19,8 +19,4 @@ export class ProductReadComponent implements OnInit {
       console.log(products);
     });
   }
-
-  killProduct(): void {
-    // this.productService.delete()
-  }
 }
